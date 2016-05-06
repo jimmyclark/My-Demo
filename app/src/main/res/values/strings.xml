@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">My Demo</string>
+    <string name="author">By ClarkWu</string>
+    <string name="lifecycle">请注意观察日志记录</string>
+    <string name="qrcode_edit">请输入需要显示的网址</string>
+    <string name="qrcode_title">二维码示例</string>
+    <string name="read_qrcode">读取二维码</string>
+    <string name="show_qrcode">显示二维码内容</string>
+    <string name="fragment_title">fragment实例</string>
+    <string name="data_title">数据实例</string>
+    <string name="shared_title">SharedPreference</string>
+    <string name="shared_edit">请输入保存内容</string>
+    <string name="save">存取</string>
+    <string name="read">读取</string>
+    <string name="file_title">File</string>
+    <string name="sql_title">SQLite</string>
+</resources>

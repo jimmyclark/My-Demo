@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="@string/app_name"
+        android:layout_weight="2"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rc_main"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="12"
+        android:background="#abcdef"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="@string/author"
+        android:textSize="10sp"
+        android:layout_weight="1"
+        android:textColor="#999999"
+        android:textAlignment="center"
+        />
+
+
+
+
+
+</LinearLayout>

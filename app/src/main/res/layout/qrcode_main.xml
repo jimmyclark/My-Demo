@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <TextView
+        android:id="@+id/qrcode_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/qrcode_title"
+        android:gravity="center"
+        android:textSize="25sp"
+        />
+    <EditText
+        android:id="@+id/qrcode_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/qrcode_edit"
+        android:layout_below="@id/qrcode_title"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+     />
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/qrcode_img"
+        android:layout_below="@id/qrcode_edit"
+        android:layout_centerInParent="true"
+        />
+    <View
+        android:id="@+id/split"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/qrcode_edit"
+        android:visibility="invisible"
+        />
+    <LinearLayout
+        android:id="@+id/btn_linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/qrcode_img"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"
+        >
+        <Button
+            android:id="@+id/show_qrcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/show_qrcode"/>
+        <Button
+            android:id="@+id/read_qrcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/read_qrcode"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/showText"
+        android:layout_below="@id/btn_linear"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"
+        android:text="暂无内容"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
