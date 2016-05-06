@@ -3,11 +3,13 @@ package com.clark.demo;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.*;
+import android.os.Bundle;
 import android.os.Process;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import java.io.File;
 
 /**
  * Created by ClarkWu on 2016/5/6.
@@ -27,11 +29,12 @@ public class JumpAppActivity extends Activity {
             @Override
             public void onClick(View v) {
                 String message = needMeesage.getText().toString();
-                String url = "http://clark.app?message=" + message;
+                File file = new File("file:///android_assets/a.htm");
+                Uri uri = Uri.fromFile(file);
                 Intent intent = new Intent();
                 intent.setAction("android.intent.action.VIEW");
-                Uri content_url = Uri.parse(url);
-                intent.setData(content_url);
+                intent.setData(uri);
+                intent.setClassName("com.android.browser","com.android.browser.BrowserActivity");
                 startActivity(intent);
                 android.os.Process.killProcess(Process.myPid());
             }
