@@ -22,7 +22,7 @@
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="http" android:host="clark.app"/>
+                <data android:scheme="clarkwu" android:host="jump"/>
             </intent-filter>
         </activity>
 
@@ -46,6 +46,10 @@
         <activity android:name="com.clark.demo.DataActivity"/>
 
         <activity android:name="com.clark.demo.JumpAppActivity"/>
+
+        <activity android:name="com.clark.demo.OpenGLActivity"/>
+        
+        <activity android:name="com.clark.gldemo.FirstGLActivity"/>
 
 
     </application>
