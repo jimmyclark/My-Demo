@@ -4,20 +4,19 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.clark.demo.R;
-import com.clark.holder.MainViewHolder;
+import com.clark.holder.GLViewHolder;
+import com.clark.holder.TutorialViewHolder;
 import com.clark.inter.OnRecyclerViewClickListener;
 
-
 /**
- * Created by ClarkWu on 2016/3/24.
+ * Created by ClarkWu on 2016/3/25.
  */
-public class MainViewAdapter extends RecyclerView.Adapter{
-    public int [] mPics = new int[]{R.mipmap.tutorial,R.mipmap.work,R.mipmap.opengs};
-    public String[]  mItems = new String[]{"tutorial","work","openGL"};
+public class GLViewAdapter extends RecyclerView.Adapter{
+    public String[] mItems = new String[]{"第一个OpenGL 3D程序"};
 
     public OnRecyclerViewClickListener getmOnRecyclerItemListener() {
         return mOnRecyclerItemListener;
@@ -31,20 +30,19 @@ public class MainViewAdapter extends RecyclerView.Adapter{
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View recyclerView = LayoutInflater.from(parent.getContext()).inflate(R.layout.content_main,parent,false);
-        MainViewHolder mMainViewHolder = new MainViewHolder(recyclerView);
-        mMainViewHolder.imgBtn =  (Button) recyclerView.findViewById(R.id.imgBtn);
-        mMainViewHolder.txtTitle = (TextView) recyclerView.findViewById(R.id.txt);
-        return mMainViewHolder;
+        View recycleAdapterView = LayoutInflater.from(parent.getContext()).inflate(R.layout.gl_content,parent,false);
+        GLViewHolder holder = new GLViewHolder(recycleAdapterView);
+        holder.txtTitle = (TextView) recycleAdapterView.findViewById(R.id.item_gl);
+        holder.mLinearLayout = (LinearLayout) recycleAdapterView.findViewById(R.id.linearLayout);
+        return holder;
     }
 
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-        final MainViewHolder viewHolder = (MainViewHolder)holder;
-        viewHolder.imgBtn.setBackgroundResource(mPics[position]);
+        final GLViewHolder viewHolder = (GLViewHolder)holder;
         viewHolder.txtTitle.setText(mItems[position]);
         if(getmOnRecyclerItemListener() != null){
-            viewHolder.imgBtn.setOnClickListener(new View.OnClickListener() {
+            viewHolder.mLinearLayout.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     int pos = viewHolder.getLayoutPosition();
@@ -58,6 +56,5 @@ public class MainViewAdapter extends RecyclerView.Adapter{
     public int getItemCount() {
         return mItems.length;
     }
+
 }
-
-

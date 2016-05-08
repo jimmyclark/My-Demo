@@ -29,12 +29,10 @@ public class JumpAppActivity extends Activity {
             @Override
             public void onClick(View v) {
                 String message = needMeesage.getText().toString();
-                File file = new File("file:///android_assets/a.htm");
-                Uri uri = Uri.fromFile(file);
+                Uri uri = Uri.parse("clarkwu://jump?message=" + message);
                 Intent intent = new Intent();
                 intent.setAction("android.intent.action.VIEW");
                 intent.setData(uri);
-                intent.setClassName("com.android.browser","com.android.browser.BrowserActivity");
                 startActivity(intent);
                 android.os.Process.killProcess(Process.myPid());
             }

@@ -77,6 +77,10 @@ public class MainActivity extends Activity {
                     Intent intent = new Intent();
                     intent.setClass(MainActivity.this,WorkActivity.class);
                     startActivity(intent);
+                }else if(position == 2){
+                    Intent intent = new Intent();
+                    intent.setClass(MainActivity.this,OpenGLActivity.class);
+                    startActivity(intent);
                 }
             }
         });
